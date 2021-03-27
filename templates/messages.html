@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<style>
+  .message {
+    width: 100%;
+    border-bottom: 1px solid #eaeaea;
+    margin-bottom: 2rem;
+    vertical-align: middle;
+  }
+  .message_me {
+    @extend .message;
+    background: #94e485;
+    text-align: right;
+  }
+  .message_oth {
+    @extend .message;
+    background: #abb4c0;
+    text-align: left;
+  }
+  .send_c {
+    width: 100%;
+    background: #abb4c0;
+    border-bottom: 1px solid #eaeaea;
+    margin-bottom: 2rem;
+  }
+</style>
+
+<head>
+  <title>Msg</title>
+</head>
+
+<body>
+  <div id="messages">
+    <div class=message_me>
+      <p>HELLO!</p>
+    </div>
+    <div class=message_oth>
+      <p>HELLO!</p>
+    </div>
+  </div>
+  <form action="/messaging" method="post" class=".send_c">
+    <input type="text" name="message" value="" />
+    <input type="submit" name="send" value="Send" />
+  </form>
+</body>
