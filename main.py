@@ -7,8 +7,6 @@ import requests
 # client_id = '' #insert your client id
 # client_secret = '' # insert your client secret id here
 
-client_id = '5e84560b59264cbda2a1bab704e75bdd'
-client_secret = '87f821a6ced64864b6e52f12f60a98b5'
 redirect_uri = 'http://localhost:8080/'
 
 # client_credentials_manager = SpotifyClientCredentials(client_id, client_secret)
