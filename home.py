@@ -20,7 +20,7 @@ client_secret = credentials['client_secret']
 # client_credentials_manager = SpotifyClientCredentials(client_id, client_secret)
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=client_id, client_secret=client_secret, redirect_uri=redirect_uri))
 
-
+"""
 def create_playlist(song_ids, room_id):
 	scope = 'playlist-modify-public'
 	auth_manager=SpotifyOAuth(scope=scope)
@@ -30,6 +30,19 @@ def create_playlist(song_ids, room_id):
 	response = sp.user_playlist_create(playlist_name, public=True, collaborative=False, description='')
 	playlist_id = response["id"]
 	sp.playlist_add_items(playlist_id, tracks, position=None)
+	return playlist_id
+"""
+def create_playlist(song_ids, room_id):
+	scope = 'playlist-modify-public'
+	username = 'staplegun.'
+	spotipy_redirect_uri = 'chatroom.html'
+	token = util.prompt_for_user_token(username, scope, client_id=client_id, client_secret=client_secret, redirect_uri=spotipy_redirect_uri)
+	sp = spotipy.Spotify(auth=token)
+	playlist_name = room_id
+	tracks = ["spotify:track:" + tid for tid in song_ids]
+	response = sp.user_playlist_create("staplegun.", playlist_name, public=True, collaborative=False, description='')
+	playlist_id = response["id"]
+	sp.user_playlist_add_tracks("staplegun.", playlist_id, tracks, position=None)
 	return playlist_id
 
 
@@ -58,8 +71,6 @@ def load_app():
 
 @app.route("/chatroom/<room_id>", methods=["GET", "POST"])
 def load_chatroom(room_id):
-	print(song_ids)
-	print(room_id)
 	playlist_id = create_playlist(song_ids, room_id)
 	return render_template("chatroom.html", room_id=room_id, song_ids=song_ids, playlist_id=playlist_id)
 

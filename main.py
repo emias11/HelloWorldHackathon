@@ -17,7 +17,6 @@ client_secret = credentials['client_secret']
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=client_id, client_secret=client_secret, redirect_uri=redirect_uri))
 
 
-
 playlists = sp.user_playlists('staplegun.')
 
 playlist_list = []

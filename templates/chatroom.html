@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="{{ url_for('static', filename='chatroom.css') }}" type="text/css" rel="stylesheet">
     <meta charset="UTF-8">
     <title>Chatroom</title>
 </head>
 <body>
-    <div>
-        <iframe id="theFrame" src="http://disposablechat.com/chat/{{ room_id }}" style="width:60%; height:1200px;" frameborder="0" </iframe>
-    </div>
-    <div>
-        <iframe src="https://open.spotify.com/embed/playlist/{{ playlist_id }}" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-    </div>
+        <iframe id="theFrame" src="http://disposablechat.com/chat/{{ room_id }}" frameborder="0" scrolling="no" width = "1200" height = "550" align="left"></iframe>
+        <iframe src="https://open.spotify.com/embed/playlist/{{ playlist_id }/?password=}" frameborder="0" scrolling="no" height = "550" align="right"></iframe>
 </body>
 </html>
