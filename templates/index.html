@@ -35,19 +35,23 @@
         <div class="container">
             <div class="row">
                 <div class="booking-form">
-                    <form action="" method="post">
-                        {% from "_formhelpers.html" import render_field %}
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        {{ render_field(form.playlist) }}
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-btn">
-                                {{ form.submit(class_="submit-btn") }}
-                            </div>
-                        </form>
+                  <div class="form-header">
+                    <h4>Band Together is a greaet way to meet new friends with a similar music taste</h4>
+                    <br>
+                  </div>
+                  <form action="" method="post">
+                      {% from "_formhelpers.html" import render_field %}
+                          <div class="row">
+                              <div class="col-sm-6">
+                                  <div class="form-group">
+                                      {{ render_field(form.playlist) }}
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="form-btn">
+                              {{ form.submit(class_="submit-btn") }}
+                          </div>
+                      </form>
                 </div>
             </div>
         </div>
