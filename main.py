@@ -8,7 +8,7 @@ client_secret = FileIO("priv/client_token").readline
 app = Flask(__name__, template_folder=".")
 
 me=1234
-
+new_var = 43121224
 messages = [(me,"hello")(34,"hello! I'm another person"),(35,"Hello other person!")]
 
 @app.route("/")
