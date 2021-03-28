@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+       function show_load_text() {
+           var p = document.getElementById("loading");
+           p.style.display = "block";
+       }
+    </script>
+</head>
+<body>
+    <form action="/" id='form' method ="POST">
+        <input type="text" id="pn" name="playlist_id">
+        <input type="submit" onclick="show_load_text()">
+    </form>
+    <p id="loading" style="display:none" >Please wait whilst we find you people with similar music taste</p>
+</body>
+</html>
