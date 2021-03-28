@@ -18,7 +18,7 @@ def index():
 @app.route("/messaging",methods=['POST'])
 def handle_msg():
   sender = request.cookies
-  messages.append
+  messages.append(())
   return redirect("/")
 
 @app.route("/register")
