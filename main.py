@@ -5,7 +5,7 @@ from spotipy.oauth2 import SpotifyClientCredentials, SpotifyOAuth
 import requests
 
 # client_id = '' #insert your client id
-# client_secret = '' # insert your client secret id here
+# client_secret = '' #insert your client secret here
 
 redirect_uri = 'http://localhost:8080/'
 with open("credentials.json", "r") as file:
