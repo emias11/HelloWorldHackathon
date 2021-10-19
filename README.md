@@ -1,5 +1,7 @@
 # Band Together 
 
+Team members: Mia Stapleton, Natalie Wu, Scarlet Xiao 
+
 ## Inspiration
 Tired of constantly searching for new music on your own? Band Together allows people to connect through their love of music and to share music from all over the world whilst making new friends.
 
